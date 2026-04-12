@@ -1,0 +1,64 @@
+:root {
+  --kaze-ink: #18211f;
+  --kaze-muted: #61706a;
+  --kaze-cream: #f8f1e5;
+  --kaze-paper: #fffaf0;
+  --kaze-gold: #b8893b;
+  --kaze-gold-deep: #815b1f;
+  --kaze-green: #224c3f;
+  --kaze-green-soft: #dfeadf;
+  --kaze-clay: #b96543;
+  --kaze-border: rgba(34, 76, 63, 0.16);
+  --kaze-shadow: 0 24px 80px rgba(24, 33, 31, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--kaze-ink);
+  background:
+    radial-gradient(circle at 12% 14%, rgba(184, 137, 59, 0.16), transparent 28rem),
+    radial-gradient(circle at 88% 8%, rgba(34, 76, 63, 0.14), transparent 26rem),
+    linear-gradient(135deg, #fffaf0 0%, #f5ead9 44%, #eaf1e8 100%);
+  font-family: Avenir Next, Avenir, Optima, Candara, Segoe UI, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: '';
+  opacity: 0.36;
+  background-image:
+    linear-gradient(rgba(34, 76, 63, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 76, 63, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000, transparent 72%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
