@@ -17,15 +17,32 @@ dist/
 
 ## Hosting
 
-The website is configured for GitHub Pages deployment through GitHub Actions.
+The website is configured for Vercel hosting.
 
-The workflow is located at:
+GitHub Actions is now used only as a CI build check. The workflow is located at:
 
 ```text
-.github/workflows/deploy.yml
+.github/workflows/ci.yml
 ```
 
-It runs `npm ci` and `npm run build` on pull requests to `main`. On pushes to `main`, it uploads `dist/` and deploys it to GitHub Pages.
+It runs `npm ci` and `npm run build` on pull requests and pushes to `main`.
+
+Vercel should handle production deployments through its GitHub integration. Import the repository in Vercel, keep the detected Vite settings, and connect the production domain there.
+
+Recommended Vercel settings:
+
+```text
+Framework preset: Vite
+Build command: npm run build
+Output directory: dist
+Install command: npm ci
+```
+
+The same build settings are also tracked in:
+
+```text
+vercel.json
+```
 
 ## Domain
 
@@ -33,19 +50,13 @@ Production domain:
 
 [kazerwanda.com](https://kazerwanda.com)
 
-The custom domain is tracked in:
-
-```text
-public/CNAME
-```
-
-GitHub Pages should be configured in the repository settings to use GitHub Actions as the Pages source.
+The domain should be connected inside the Vercel project settings. Because the domain was purchased on Vercel, Vercel can manage the DNS records for the project.
 
 ## Before Production
 
-- In GitHub, open repository settings and set Pages source to GitHub Actions.
-- Configure DNS records for `kazerwanda.com` to point to GitHub Pages.
-- Enable HTTPS in the GitHub Pages settings after DNS is detected.
+- Import the GitHub repository into Vercel.
+- In Vercel, set `kazerwanda.com` as the production domain for the project.
+- Confirm Vercel shows the domain as valid and HTTPS is active.
 - Add SEO metadata and social sharing tags.
 - Replace the default favicon with Kaze brand assets.
 - Review privacy/legal pages before adding analytics or forms.
