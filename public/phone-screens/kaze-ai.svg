@@ -1,0 +1,26 @@
+<svg width="420" height="860" viewBox="0 0 420 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="860" fill="#101010"/>
+  <path d="M0 0h420v860H0z" fill="#101010"/>
+  <rect x="30" y="48" width="134" height="32" rx="8" fill="#FFD447"/>
+  <text x="52" y="69" fill="#101010" font-family="Arial" font-size="13" font-weight="900">OFFLINE AI</text>
+  <text x="30" y="146" fill="#FFFFFF" font-family="Arial Black, Arial" font-size="37">Event help</text>
+  <text x="30" y="188" fill="#FFFFFF" font-family="Arial Black, Arial" font-size="37">without signal.</text>
+  <text x="30" y="224" fill="#BFC5C8" font-family="Arial" font-size="15">Runs locally with cached event data.</text>
+
+  <g font-family="Arial">
+    <rect x="30" y="278" width="360" height="108" rx="8" fill="#FFFFFF"/>
+    <text x="56" y="318" fill="#101010" font-size="13" font-weight="900">VOICE TO RSVP</text>
+    <text x="56" y="354" fill="#101010" font-size="20" font-weight="900">Two seats, vegetarian meal</text>
+
+    <rect x="30" y="420" width="360" height="108" rx="8" fill="#FFD447"/>
+    <text x="56" y="460" fill="#101010" font-size="13" font-weight="900">ACCESS ANSWER</text>
+    <text x="56" y="496" fill="#101010" font-size="20" font-weight="900">Ballroom access confirmed</text>
+
+    <rect x="30" y="562" width="360" height="108" rx="8" fill="#24C7D9"/>
+    <text x="56" y="602" fill="#101010" font-size="13" font-weight="900">PRIVACY SHIELD</text>
+    <text x="56" y="638" fill="#101010" font-size="20" font-weight="900">Blur guests before upload</text>
+  </g>
+
+  <rect x="30" y="726" width="360" height="58" rx="8" fill="#00A86B" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="132" y="762" fill="#FFFFFF" font-family="Arial" font-size="18" font-weight="900">Ask event AI</text>
+</svg>

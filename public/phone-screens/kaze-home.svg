@@ -1,0 +1,34 @@
+<svg width="420" height="860" viewBox="0 0 420 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="860" fill="#F8FBFF"/>
+  <path d="M0 0h420v860H0z" fill="#F8FBFF"/>
+  <path d="M0 0h420v118H0z" fill="#101010"/>
+  <rect x="30" y="42" width="92" height="28" rx="8" fill="#FFD447"/>
+  <text x="46" y="61" fill="#101010" font-family="Arial" font-size="13" font-weight="900">KAZE</text>
+  <text x="30" y="162" fill="#101010" font-family="Arial Black, Arial" font-size="34">Event desk</text>
+  <text x="30" y="194" fill="#62666D" font-family="Arial" font-size="15">East Africa Finance Summit</text>
+
+  <rect x="30" y="228" width="360" height="138" rx="8" fill="#00A86B" stroke="#101010" stroke-width="3"/>
+  <text x="56" y="270" fill="#FFFFFF" font-family="Arial" font-size="13" font-weight="900">TODAY</text>
+  <text x="56" y="305" fill="#FFFFFF" font-family="Arial Black, Arial" font-size="27">Opening keynote</text>
+  <text x="56" y="334" fill="#E9FFF5" font-family="Arial" font-size="14">08:00 - 09:15, Great Rift Ballroom</text>
+
+  <rect x="30" y="404" width="168" height="118" rx="8" fill="#FFD447" stroke="#101010" stroke-width="3"/>
+  <text x="52" y="442" fill="#101010" font-family="Arial" font-size="13" font-weight="900">INVITED</text>
+  <text x="52" y="486" fill="#101010" font-family="Arial Black, Arial" font-size="42">318</text>
+  <rect x="222" y="404" width="168" height="118" rx="8" fill="#FFFFFF" stroke="#101010" stroke-width="3"/>
+  <text x="244" y="442" fill="#101010" font-family="Arial" font-size="13" font-weight="900">PASSES</text>
+  <text x="244" y="486" fill="#101010" font-family="Arial Black, Arial" font-size="42">284</text>
+
+  <text x="30" y="578" fill="#101010" font-family="Arial" font-size="13" font-weight="900">ATTACHED SERVICES</text>
+  <g font-family="Arial">
+    <rect x="30" y="606" width="360" height="50" rx="8" fill="#FFFFFF" stroke="#101010" stroke-width="2"/>
+    <circle cx="56" cy="631" r="10" fill="#EF3B35"/>
+    <text x="80" y="637" fill="#101010" font-size="16" font-weight="800">Catering and drinks</text>
+    <rect x="30" y="672" width="360" height="50" rx="8" fill="#FFFFFF" stroke="#101010" stroke-width="2"/>
+    <circle cx="56" cy="697" r="10" fill="#24C7D9"/>
+    <text x="80" y="703" fill="#101010" font-size="16" font-weight="800">Media, photo, livestream</text>
+    <rect x="30" y="738" width="360" height="50" rx="8" fill="#FFFFFF" stroke="#101010" stroke-width="2"/>
+    <circle cx="56" cy="763" r="10" fill="#00A86B"/>
+    <text x="80" y="769" fill="#101010" font-size="16" font-weight="800">Transport and support</text>
+  </g>
+</svg>
