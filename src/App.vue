@@ -1,129 +1,159 @@
 <template>
   <div class="site-shell">
-    <header class="topbar" aria-label="Kaze Rwanda navigation">
-      <a class="brand" href="#top" aria-label="Kaze Rwanda home">
-        <img src="./assets/k_logo.svg" alt="Kaze Rwanda" />
-        <span>Kaze Rwanda</span>
+    <header class="app-bar" aria-label="Kaze Rwanda navigation">
+      <a class="brand-lockup" href="#top" aria-label="Kaze Rwanda home">
+        <img class="brand-mark" src="./assets/k_logo.svg" alt="Kaze mark" />
+        <span>
+          <strong>Kaze</strong>
+          <small><img src="./assets/gabo_mark.svg" alt="" /> by GABO</small>
+        </span>
       </a>
 
-      <nav class="nav-strip" aria-label="Main navigation">
+      <nav aria-label="Main navigation">
+        <a href="#stay">Stay</a>
         <a href="#events">Events</a>
-        <a href="#services">Services</a>
-        <a href="#ai">AI</a>
+        <a href="#requests">Requests</a>
         <a href="#partners">Partners</a>
       </nav>
 
-      <a class="contact-link" href="mailto:dev@kazerwanda.com">dev@kazerwanda.com</a>
+      <a class="ghost-link" href="mailto:dev@kazerwanda.com">Contact</a>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <EventScene />
+      <section class="onboarding-shell hero-shell" aria-labelledby="hero-title">
+        <AmbientPattern />
+
+        <div class="hero-visual">
+          <PageHero page="0" />
+          <DeviceShot screen="/app-screens/framed/kaze-home-framed.png" label="Kaze home and pass app screenshot" />
+        </div>
 
         <div class="hero-copy">
-          <p class="eyebrow">Hospitality, events, and guest access in Rwanda</p>
-          <h1 id="hero-title">Run the event before the day starts.</h1>
+          <p class="eyebrow">Welcome to Kaze</p>
+          <h1 id="hero-title">Your hotel, event, and guest access in one app.</h1>
           <p>
             Kaze helps venues and organizers create invitations, confirm guests, attach services,
             collect payments, and issue Kaze Pass access from one mobile-first flow.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a href="#events">See the event flow</a>
-            <a href="mailto:dev@kazerwanda.com">Start a pilot</a>
+
+          <div class="feature-list" aria-label="Kaze highlights">
+            <FeatureRow icon="explore" title="Stay and event details in one place" />
+            <FeatureRow icon="service" title="Hotel services without calling" />
+            <FeatureRow icon="support" title="Less front-desk and event-day friction" />
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#events">Explore the flow</a>
+            <a class="secondary-button" href="mailto:dev@kazerwanda.com">Partner with Kaze</a>
+          </div>
+
+          <div class="download-card" aria-label="Download Kaze app">
+            <img src="/kaze-download-qr.svg" alt="QR code to download the Kaze app" />
+            <div>
+              <p class="eyebrow">Download app</p>
+              <strong>Scan to open Kaze on your phone.</strong>
+              <a href="https://kazerwanda.com/download">Open download page</a>
+            </div>
           </div>
         </div>
-
-        <div class="hero-phones" aria-label="Kaze app previews">
-          <PhonePreview
-            class="phone-a"
-            screen="/phone-screens/kaze-home.svg"
-            label="Kaze event dashboard screen"
-          />
-          <PhonePreview
-            class="phone-b"
-            screen="/phone-screens/kaze-invite.svg"
-            label="Kaze invitation code screen"
-          />
-          <PhonePreview
-            class="phone-c"
-            screen="/phone-screens/kaze-ai.svg"
-            label="Kaze offline AI screen"
-          />
-        </div>
-
-        <div class="event-ribbon" aria-label="Live event summary">
-          <span>Live event</span>
-          <strong>East Africa Finance Summit</strong>
-          <small>Invites, passes, services, and AI support ready for guests.</small>
-        </div>
       </section>
 
-      <section id="events" class="flow-section">
-        <div class="section-heading">
-          <span>01 / Event flow</span>
-          <h2>Built for conferences, weddings, and private-event access.</h2>
+      <section id="stay" class="onboarding-shell split-shell">
+        <AmbientPattern />
+        <div class="section-copy">
+          <p class="eyebrow">Hotel experience</p>
+          <h2>See your stay, services, and property details without waiting at the front desk.</h2>
           <p>
-            The first version focuses on the event journey: who is invited, what they can access,
-            which services are attached, and what needs to happen before guests arrive.
+            Keep room details, directions, hotel services, and guest support in one calm mobile
+            experience during the stay.
           </p>
         </div>
 
-        <div class="flow-track">
-          <article v-for="item in eventPillars" :key="item.title">
-            <span>{{ item.kicker }}</span>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.text }}</p>
-          </article>
+        <div class="app-card-stack">
+          <InfoCard
+            eyebrow="Stay details"
+            title="Everything stays close"
+            body="Guests can find stay details, practical service options, and venue information without jumping between calls."
+          />
+          <InfoCard
+            eyebrow="Guest support"
+            title="Quieter service requests"
+            body="Requests like dining, late checkout, towels, or help can move through one structured flow."
+          />
         </div>
       </section>
 
-      <section id="services" class="market-section">
-        <div class="market-intro">
-          <span>02 / Service marketplace</span>
-          <h2>Every event needs more than a venue.</h2>
+      <section id="events" class="onboarding-shell flow-shell">
+        <AmbientPattern />
+        <div class="section-copy">
+          <p class="eyebrow">Map and events</p>
+          <h2>Find rooms, amenities, and event spaces fast.</h2>
           <p>
-            Kaze turns add-ons into a clean buying flow instead of scattered calls. Services can be
-            attached to reservations, invitations, deposits, balances, and guest access rules.
+            Kaze is built around the event journey: who is invited, what they can access, which
+            services are attached, and what needs to happen before guests arrive.
           </p>
         </div>
 
-        <div class="service-board">
-          <article v-for="service in serviceStack" :key="service.title">
-            <span>{{ service.code }}</span>
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.text }}</p>
-          </article>
+        <div class="screen-showcase" aria-label="Kaze app screenshots">
+          <DeviceShot screen="/app-screens/framed/kaze-home-framed.png" label="Kaze home screen with pass and quick actions" />
+          <DeviceShot screen="/app-screens/framed/kaze-events-framed.png" label="Kaze event schedule screen with offline concierge" />
+          <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
+        </div>
+
+        <div class="flow-grid">
+          <InfoCard
+            v-for="item in eventPillars"
+            :key="item.title"
+            :eyebrow="item.kicker"
+            :title="item.title"
+            :body="item.text"
+          />
         </div>
       </section>
 
-      <section id="ai" class="ai-section">
-        <div class="ai-copy">
-          <span>03 / On-device AI</span>
-          <h2>AI that keeps private event work on the device.</h2>
+      <section id="requests" class="onboarding-shell request-shell">
+        <AmbientPattern />
+        <div class="request-visual">
+          <PageHero page="2" />
+          <DeviceShot screen="/app-screens/framed/kaze-events-framed.png" label="Kaze events screen with offline AI support" />
+          <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
+        </div>
+
+        <div class="section-copy">
+          <p class="eyebrow">Requests and access</p>
+          <h2>Request services with less back and forth.</h2>
           <p>
-            Kaze can use on-device AI for low-connectivity environments: organizer voice notes,
-            event FAQs, access rules, receipt summaries, translations, and privacy-safe media.
+            Ask for services, keep one digital pass for access, and use on-device AI for
+            low-connectivity environments: voice notes, event FAQs, access rules, receipt
+            summaries, translations, and privacy-safe media.
           </p>
         </div>
 
-        <div class="ai-lanes">
-          <article v-for="feature in aiFeatures" :key="feature.title">
-            <span>{{ feature.kicker }}</span>
-            <h3>{{ feature.title }}</h3>
-            <p>{{ feature.text }}</p>
-          </article>
+        <div class="ai-grid">
+          <InfoCard
+            v-for="feature in aiFeatures"
+            :key="feature.title"
+            :eyebrow="feature.kicker"
+            :title="feature.title"
+            :body="feature.text"
+          />
         </div>
       </section>
 
-      <section id="partners" class="partner-section">
-        <span>For venues and operators</span>
-        <h2>Make your space easier to book, serve, and control.</h2>
-        <p>
-          Kaze is for hotels, conference rooms, wedding venues, apartments, event organizers,
-          catering teams, decor services, media teams, transport teams, cleaners, and insurers in
-          Rwanda.
-        </p>
-        <a href="mailto:dev@kazerwanda.com">Contact Kaze</a>
+      <section id="partners" class="partner-panel">
+        <div>
+          <p class="eyebrow">For venues and operators</p>
+          <h2>Make your space easier to book, serve, and control.</h2>
+          <p>
+            Kaze is for hotels, conference rooms, wedding venues, apartments, event organizers,
+            catering teams, decor services, media teams, transport teams, cleaners, and insurers in
+            Rwanda.
+          </p>
+        </div>
+        <div class="partner-actions">
+          <a class="primary-button" href="mailto:dev@kazerwanda.com">Contact Kaze</a>
+          <a class="secondary-button download-link" href="https://kazerwanda.com/download">Download app</a>
+        </div>
       </section>
     </main>
 
@@ -136,149 +166,40 @@
 </template>
 
 <script setup>
-import { defineComponent, h, onBeforeUnmount, onMounted, ref } from 'vue'
+import { defineComponent, h } from 'vue'
+import kLogo from './assets/k_logo.svg'
 
-const EventScene = defineComponent({
+const AmbientPattern = defineComponent({
   setup() {
-    const canvasRef = ref(null)
-    let renderer
-    let scene
-    let camera
-    let group
-    let frameId
-    let THREE
-
-    const pointer = { x: 0, y: 0 }
-
-    const resize = () => {
-      if (!renderer || !camera || !canvasRef.value) return
-      const { clientWidth, clientHeight } = canvasRef.value
-      renderer.setSize(clientWidth, clientHeight, false)
-      camera.aspect = clientWidth / clientHeight
-      camera.updateProjectionMatrix()
-    }
-
-    const handlePointer = (event) => {
-      pointer.x = (event.clientX / window.innerWidth - 0.5) * 2
-      pointer.y = (event.clientY / window.innerHeight - 0.5) * 2
-    }
-
-    onMounted(async () => {
-      THREE = await import('three')
-      const canvas = canvasRef.value
-
-      scene = new THREE.Scene()
-      camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100)
-      camera.position.set(0.2, 0.1, 9)
-
-      renderer = new THREE.WebGLRenderer({
-        canvas,
-        antialias: true,
-        alpha: true,
-        preserveDrawingBuffer: true,
-      })
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-      renderer.outputColorSpace = THREE.SRGBColorSpace
-
-      scene.add(new THREE.AmbientLight(0xffffff, 2.2))
-
-      const key = new THREE.DirectionalLight(0xffffff, 3.4)
-      key.position.set(4, 6, 5)
-      scene.add(key)
-
-      const wash = new THREE.PointLight(0xffd447, 32, 20)
-      wash.position.set(-4, -1.5, 4)
-      scene.add(wash)
-
-      group = new THREE.Group()
-      scene.add(group)
-
-      const materials = {
-        ink: new THREE.MeshStandardMaterial({ color: 0x101010, roughness: 0.4, metalness: 0.1 }),
-        yellow: new THREE.MeshStandardMaterial({ color: 0xffd447, roughness: 0.36, metalness: 0.2 }),
-        green: new THREE.MeshStandardMaterial({ color: 0x00a86b, roughness: 0.42, metalness: 0.16 }),
-        red: new THREE.MeshStandardMaterial({ color: 0xef3b35, roughness: 0.48, metalness: 0.12 }),
-        white: new THREE.MeshStandardMaterial({ color: 0xf8fbff, roughness: 0.52, metalness: 0.06 }),
-      }
-
-      const ticketGeometry = new THREE.BoxGeometry(1.86, 0.72, 0.08)
-      const chipGeometry = new THREE.BoxGeometry(0.62, 0.62, 0.12)
-
-      ;[
-        [-2.3, 0.95, -0.2, -0.42, materials.yellow],
-        [-0.9, 1.35, 0.18, -0.13, materials.white],
-        [0.62, 1.05, 0.05, 0.18, materials.green],
-        [2.12, 0.42, -0.08, 0.46, materials.red],
-        [-1.72, -0.42, 0.12, 0.28, materials.green],
-        [0.1, -0.7, 0.28, -0.2, materials.ink],
-        [1.95, -0.95, 0.02, 0.16, materials.yellow],
-      ].forEach(([x, y, z, rotation, material]) => {
-        const mesh = new THREE.Mesh(ticketGeometry, material)
-        mesh.position.set(x, y, z)
-        mesh.rotation.z = rotation
-        mesh.rotation.y = rotation * 0.34
-        group.add(mesh)
-      })
-
-      ;[
-        [-2.95, -1.05, 0.55, materials.red],
-        [-0.72, 0.22, 0.82, materials.yellow],
-        [1.06, 1.72, 0.42, materials.ink],
-        [2.96, -0.26, 0.6, materials.green],
-      ].forEach(([x, y, z, material]) => {
-        const chip = new THREE.Mesh(chipGeometry, material)
-        chip.position.set(x, y, z)
-        chip.rotation.x = 0.6
-        chip.rotation.z = 0.8
-        group.add(chip)
-      })
-
-      const curveMaterial = new THREE.LineBasicMaterial({
-        color: 0x101010,
-        transparent: true,
-        opacity: 0.34,
-      })
-      const curve = new THREE.CatmullRomCurve3([
-        new THREE.Vector3(-3.1, -1.08, 0.35),
-        new THREE.Vector3(-1.2, 0.4, 0.45),
-        new THREE.Vector3(0.8, 1.46, 0.4),
-        new THREE.Vector3(3.05, -0.35, 0.38),
+    return () =>
+      h('div', { class: 'ambient-pattern', 'aria-hidden': 'true' }, [
+        h('span', { class: 'ambient-line line-a' }),
+        h('span', { class: 'ambient-line line-b' }),
+        h('span', { class: 'ambient-circle circle-a' }),
+        h('span', { class: 'ambient-circle circle-b' }),
       ])
-      group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(80)), curveMaterial))
+  },
+})
 
-      resize()
-      window.addEventListener('resize', resize)
-      window.addEventListener('pointermove', handlePointer)
-
-      const animate = () => {
-        frameId = requestAnimationFrame(animate)
-        const time = performance.now() * 0.001
-        group.rotation.y = Math.sin(time * 0.36) * 0.12 + pointer.x * 0.06
-        group.rotation.x = Math.cos(time * 0.28) * 0.06 - pointer.y * 0.04
-        group.position.y = Math.sin(time * 0.72) * 0.08
-        renderer.render(scene, camera)
-      }
-
-      animate()
-    })
-
-    onBeforeUnmount(() => {
-      cancelAnimationFrame(frameId)
-      window.removeEventListener('resize', resize)
-      window.removeEventListener('pointermove', handlePointer)
-      renderer?.dispose()
-      scene?.traverse((object) => {
-        object.geometry?.dispose?.()
-        object.material?.dispose?.()
-      })
-    })
-
-    return () => h('canvas', { ref: canvasRef, class: 'event-scene', 'aria-hidden': 'true' })
+const PageHero = defineComponent({
+  props: {
+    page: {
+      type: String,
+      default: '0',
+    },
+  },
+  setup(props) {
+    return () =>
+      h('div', { class: ['page-hero', `page-hero-${props.page}`], 'aria-hidden': 'true' }, [
+        h('span', { class: 'hero-line hero-line-a' }),
+        h('span', { class: 'hero-line hero-line-b' }),
+        h('span', { class: 'hero-route' }),
+        h('span', { class: 'hero-mark' }, [h('img', { src: kLogo, alt: '' })]),
+      ])
   },
 })
 
 const PhonePreview = defineComponent({
-  inheritAttrs: false,
   props: {
     screen: {
       type: String,
@@ -289,12 +210,75 @@ const PhonePreview = defineComponent({
       required: true,
     },
   },
-  setup(props, { attrs }) {
-    const classes = ['phone-preview', attrs.class].filter(Boolean)
+  setup(props) {
     return () =>
-      h('figure', { class: classes }, [
+      h('figure', { class: 'phone-preview' }, [
         h('span', { class: 'phone-camera', 'aria-hidden': 'true' }),
         h('img', { src: props.screen, alt: props.label }),
+      ])
+  },
+})
+
+const DeviceShot = defineComponent({
+  props: {
+    screen: {
+      type: String,
+      required: true,
+    },
+    label: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    return () =>
+      h('figure', { class: 'device-shot' }, [
+        h('img', { src: props.screen, alt: props.label }),
+      ])
+  },
+})
+
+const FeatureRow = defineComponent({
+  props: {
+    icon: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    return () =>
+      h('div', { class: 'feature-row' }, [
+        h('span', { class: ['feature-icon', `icon-${props.icon}`], 'aria-hidden': 'true' }),
+        h('strong', props.title),
+      ])
+  },
+})
+
+const InfoCard = defineComponent({
+  props: {
+    eyebrow: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    body: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    return () =>
+      h('article', { class: 'info-card' }, [
+        h('p', { class: 'eyebrow' }, props.eyebrow),
+        h('h3', props.title),
+        h('p', props.body),
       ])
   },
 })
@@ -319,29 +303,6 @@ const eventPillars = [
     kicker: 'Updates',
     title: 'Reduce event-day confusion',
     text: 'Keep schedule changes, service notes, RSVP state, and guest instructions in the same place.',
-  },
-]
-
-const serviceStack = [
-  {
-    code: '01',
-    title: 'Catering and drinks',
-    text: 'Meals, vouchers, water stations, and dietary notes tied to the event.',
-  },
-  {
-    code: '02',
-    title: 'Styling and decor',
-    text: 'Flowers, lighting, stage styling, backdrops, and table presentation.',
-  },
-  {
-    code: '03',
-    title: 'Photo, video, livestream',
-    text: 'Media packages that can be quoted, approved, and attached to reservations.',
-  },
-  {
-    code: '04',
-    title: 'Transport and support',
-    text: 'Guest pickups, cleaning, insurance, concierge help, and custom requests.',
   },
 ]
 
