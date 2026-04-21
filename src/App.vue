@@ -1,5 +1,14 @@
 <template>
   <div ref="siteShell" class="site-shell">
+    <!-- TODO: Remove this construction notice before the public beta launch. -->
+    <aside class="construction-toast" aria-label="Project status notice">
+      <p class="eyebrow">Under construction</p>
+      <strong>Kaze web and mobile are still evolving.</strong>
+      <p>
+        Some flows, visuals, and technical architecture may change before the beta release.
+      </p>
+    </aside>
+
     <header class="app-bar" aria-label="Kaze Rwanda navigation">
       <a class="brand-lockup" href="#top" aria-label="Kaze Rwanda home">
         <img class="brand-mark" src="./assets/k_logo.svg" alt="Kaze mark" />
@@ -29,30 +38,21 @@
         </div>
 
         <div class="hero-copy scroll-reveal reveal-copy">
-          <!-- TODO: Remove this construction notice before the public beta launch. -->
-          <div class="construction-note" aria-label="Project status notice">
-            <p class="eyebrow">Under construction</p>
-            <strong>Kaze web and mobile are still evolving.</strong>
-            <p>
-              Some flows, visuals, and technical architecture may change before the beta release.
-            </p>
-          </div>
-
           <p class="eyebrow">Kaze Rwanda</p>
           <h1 id="hero-title">Events and guest access in one app.</h1>
           <p>
-            Kaze Rwanda helps hotels, venues, and organizers manage events, confirm guests, attach
-            services, collect payments, and issue Kaze Pass access from one mobile-first flow.
+            Kaze helps hotels, venues, and organizers run events, confirm guests, manage access,
+            offer services, and support guests from one mobile-first app built for Rwanda.
           </p>
 
           <div class="feature-list scroll-reveal reveal-stagger" aria-label="Kaze highlights">
-            <FeatureRow icon="explore" title="Stay and event details in one place" />
-            <FeatureRow icon="service" title="Hotel services without calling" />
-            <FeatureRow icon="support" title="Less front-desk and event-day friction" />
+            <FeatureRow icon="explore" title="Events, schedules, and guest details in one place" />
+            <FeatureRow icon="service" title="Services, requests, and venue help without extra calls" />
+            <FeatureRow icon="support" title="Built for hotels, conferences, and private events in Rwanda" />
           </div>
 
           <div class="hero-actions">
-            <a class="primary-button" href="#events">Explore the flow</a>
+            <a class="primary-button" href="#events">See how Kaze works</a>
             <a class="secondary-button" href="mailto:dev@kazerwanda.com">Partner with Kaze</a>
           </div>
 
@@ -71,23 +71,23 @@
         <AmbientPattern />
         <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Hotel experience</p>
-          <h2>See your stay, services, and property details without waiting at the front desk.</h2>
+          <h2>Give guests their stay details, access, and services without sending them back to the front desk.</h2>
           <p>
-            Keep room details, directions, hotel services, and guest support in one calm mobile
-            experience during the stay.
+            Guests can keep room details, hotel services, event access, and practical directions in
+            one calm experience during the stay.
           </p>
         </div>
 
         <div class="app-card-stack scroll-reveal reveal-stagger">
           <InfoCard
             eyebrow="Stay details"
-            title="Everything stays close"
-            body="Guests can find stay details, practical service options, and venue information without jumping between calls."
+            title="Everything important stays close"
+            body="Guests can open stay details, event access, venue info, and useful next steps without jumping between calls or desks."
           />
           <InfoCard
             eyebrow="Guest support"
-            title="Quieter service requests"
-            body="Requests like dining, late checkout, towels, or help can move through one structured flow."
+            title="Requests stay simple"
+            body="Dining, late checkout, towels, venue help, and other guest requests can move through one structured mobile flow."
           />
         </div>
       </section>
@@ -96,10 +96,10 @@
         <AmbientPattern />
         <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Map and events</p>
-          <h2>Find rooms, amenities, and event spaces fast.</h2>
+          <h2>Help guests find the right event, room, floor, and service faster.</h2>
           <p>
-            Kaze is built around the event journey: who is invited, what they can access, which
-            services are attached, and what needs to happen before guests arrive.
+            Kaze is built around the real event journey: who is invited, where they should go,
+            what they can access, and which services support the event before and during the day.
           </p>
         </div>
 
@@ -113,71 +113,39 @@
           <InfoCard
             eyebrow="Arrival"
             title="Start from the guest view"
-            body="Guests can land on one mobile home for their pass, invitation state, quick directions, and event shortcuts."
+            body="Guests can open one mobile home for their pass, invitation status, quick directions, and the next action they need."
           />
           <InfoCard
             eyebrow="During the event"
-            title="Keep the schedule and access close"
-            body="Sessions, maps, service moments, and low-connectivity help stay in the same flow instead of separate tools."
+            title="Keep schedule and access close"
+            body="Sessions, maps, room changes, service moments, and low-connectivity help stay together instead of living in separate tools."
           />
           <InfoCard
             eyebrow="For organizers"
-            title="Invites stay connected to the venue"
-            body="RSVP, approval, guest lists, and event updates can stay attached to the actual place people need to reach."
+            title="Manage the event, not just the invite"
+            body="Guest lists, RSVP, approvals, event updates, and venue-linked access can stay connected to the place people actually need to reach."
           />
-        </div>
-
-        <div class="wedding-stage scroll-reveal reveal-section" aria-label="Wedding events on Kaze">
-          <div class="wedding-copy scroll-reveal reveal-copy">
-            <p class="eyebrow">Wedding events</p>
-            <h3>From vows to the evening reception, the guest flow can still feel graceful.</h3>
-            <p>
-              Kaze can support wedding events with elegant invitations, guest details, venue
-              timing, and access moments that stay beautiful instead of technical.
-            </p>
-
-            <div class="wedding-points" aria-label="Wedding event highlights">
-              <span>Invitation details close at hand</span>
-              <span>Venue, date, and access in one place</span>
-              <span>Built for private celebrations and family events</span>
-            </div>
-          </div>
-
-          <div class="wedding-visual motion-stage phone-focus-stage" data-parallax="0.12">
-            <span class="wedding-heart heart-a" aria-hidden="true">♥</span>
-            <span class="wedding-heart heart-b" aria-hidden="true">♥</span>
-            <span class="wedding-heart heart-c" aria-hidden="true">♥</span>
-            <DeviceShot screen="/app-screens/framed/kaze-wedding-framed.png" label="Kaze wedding invitation and event screen" />
-            <div class="wedding-note note-a">
-              <p>Wedding day</p>
-              <strong>Guests stay oriented without the day feeling rigid.</strong>
-            </div>
-            <div class="wedding-note note-b">
-              <p>Garden vows</p>
-              <strong>Romantic events can still have clear timing, place, and flow.</strong>
-            </div>
-          </div>
         </div>
 
         <div class="map-stage scroll-reveal reveal-section" aria-label="Hotel map across two floors with amenity cards">
           <div class="map-stage-copy scroll-reveal reveal-copy">
             <p class="eyebrow">Hotel maps</p>
-            <h3>Some venues start with indoor maps across multiple floors.</h3>
+            <h3>Help guests find the right room, floor, and venue service faster.</h3>
             <p>
               Hotels and conference venues can guide guests from arrival to lobby, ballroom,
-              registration, amenities, and quieter spaces without extra calls.
+              registration, quieter spaces, and venue services without extra calls or confusion.
             </p>
 
             <div class="map-stage-notes" aria-label="Map highlights">
               <InfoCard
                 eyebrow="Ground floor"
                 title="Arrival, reception, expo, and main entry"
-                body="Show the first moments clearly so guests know where to check in, where to queue, and how to reach the main event path."
+                body="Show the first moments clearly so guests know where to check in, where to queue, and how to reach the event route from the entrance."
               />
               <InfoCard
                 eyebrow="Upper floor"
                 title="Ballrooms, breakout rooms, and quieter amenities"
-                body="Once guests are inside, Kaze can point them toward sessions, lounges, bars, pool areas, and other venue-linked services."
+                body="Once guests are inside, Kaze can guide them toward sessions, lounges, bars, pool areas, and other venue-linked services."
               />
             </div>
           </div>
@@ -211,11 +179,11 @@
 
         <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Requests and access</p>
-          <h2>Request services with less back and forth.</h2>
+          <h2>Handle guest requests, access, and on-site help from the same app.</h2>
           <p>
-            Ask for services, keep one digital pass for access, and use on-device AI for
-            low-connectivity environments: voice notes, event FAQs, access rules, receipt
-            summaries, translations, and privacy-safe media.
+            Guests can request services, keep one digital pass ready, and use practical on-device
+            AI for low-connectivity environments: event questions, access rules, voice notes,
+            translations, and quick support.
           </p>
         </div>
 
@@ -227,6 +195,38 @@
             :title="feature.title"
             :body="feature.text"
           />
+        </div>
+      </section>
+
+      <section class="wedding-stage scroll-reveal reveal-section" aria-label="Wedding events on Kaze">
+        <div class="wedding-copy scroll-reveal reveal-copy">
+          <p class="eyebrow">Wedding events</p>
+          <h3>Private celebrations can stay beautiful without becoming confusing.</h3>
+          <p>
+            Kaze can support weddings and family events with invitation details, venue timing,
+            guest guidance, and access moments that stay elegant instead of technical.
+          </p>
+
+          <div class="wedding-points" aria-label="Wedding event highlights">
+            <span>Invitation details close at hand</span>
+            <span>Venue, date, and access in one place</span>
+            <span>Made for weddings and private celebrations</span>
+          </div>
+        </div>
+
+        <div class="wedding-visual motion-stage phone-focus-stage" data-parallax="0.12">
+          <span class="wedding-heart heart-a" aria-hidden="true">♥</span>
+          <span class="wedding-heart heart-b" aria-hidden="true">♥</span>
+          <span class="wedding-heart heart-c" aria-hidden="true">♥</span>
+          <DeviceShot screen="/app-screens/framed/kaze-wedding-framed.png" label="Kaze wedding invitation and event screen" />
+          <div class="wedding-note note-a">
+            <p>Wedding day</p>
+            <strong>Guests can stay oriented without the day feeling rigid.</strong>
+          </div>
+          <div class="wedding-note note-b">
+            <p>Garden vows</p>
+            <strong>Romantic events can still have clear place, timing, and guest flow.</strong>
+          </div>
         </div>
       </section>
 
