@@ -3,6 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://kazerwanda.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OresteGabo/kazerwanda-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OresteGabo/kazerwanda-web/issues"
+  },
+  "author": "GABO <dev@kazerwanda.com>",
+  "keywords": [
+    "kaze-rwanda",
+    "events",
+    "invitations",
+    "guest-access",
+    "hospitality",
+    "rwanda"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
