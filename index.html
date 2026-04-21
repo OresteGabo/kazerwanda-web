@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
-    <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png?v=3">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=3">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1F352D">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta
       name="description"
       content="Kaze Rwanda helps hotels, venues, and organizers manage conferences, invitations, guest access, hotel maps, event services, and offline AI support."
@@ -32,6 +33,7 @@
     <meta name="twitter:description" content="Manage conferences, invitations, guest access, hotel maps, venue services, and offline AI support in one Rwanda-ready platform.">
     <meta name="twitter:image" content="https://kazerwanda.com/social-preview.png">
 
+    <!-- SEO TODO: Add real Organization.sameAs links here when official Kaze Rwanda profiles exist. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,9 +43,15 @@
             "@id": "https://kazerwanda.com/#organization",
             "name": "Kaze Rwanda",
             "url": "https://kazerwanda.com/",
+            "description": "Kaze Rwanda is a Rwanda-based events, invitations, and guest access platform for hotels, venues, and organizers.",
+            "email": "dev@kazerwanda.com",
+            "image": "https://kazerwanda.com/icon-512.png",
+            "areaServed": "RW",
             "logo": {
               "@type": "ImageObject",
               "url": "https://kazerwanda.com/icon-512.png",
+              "contentUrl": "https://kazerwanda.com/icon-512.png",
+              "caption": "Kaze Rwanda logo",
               "width": 512,
               "height": 512
             },
@@ -57,7 +65,7 @@
             "@type": "WebSite",
             "@id": "https://kazerwanda.com/#website",
             "name": "Kaze Rwanda",
-            "alternateName": "Kaze",
+            "alternateName": ["Kaze", "kazerwanda.com"],
             "url": "https://kazerwanda.com/",
             "publisher": {
               "@id": "https://kazerwanda.com/#organization"
@@ -134,50 +142,6 @@
               "price": "0",
               "priceCurrency": "USD"
             }
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://kazerwanda.com/#feature-list",
-            "name": "Kaze Rwanda event platform features",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Stay Experience",
-                "url": "https://kazerwanda.com/#stay",
-                "description": "Keep hotel stay details, support, and property information in one mobile experience."
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Events And Invitations",
-                "url": "https://kazerwanda.com/#events",
-                "description": "Manage conferences, invitations, venue maps, schedules, and guest access."
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Offline AI Support",
-                "url": "https://kazerwanda.com/#requests",
-                "description": "Use local AI for RSVP notes, event FAQs, pass explanations, privacy checks, translations, and receipt summaries."
-              }
-            ]
-          },
-          {
-            "@type": "SiteNavigationElement",
-            "@id": "https://kazerwanda.com/#navigation",
-            "name": [
-              "Stay",
-              "Events",
-              "Requests",
-              "Partners"
-            ],
-            "url": [
-              "https://kazerwanda.com/#stay",
-              "https://kazerwanda.com/#events",
-              "https://kazerwanda.com/#requests",
-              "https://kazerwanda.com/#partners"
-            ]
           }
         ]
       }
