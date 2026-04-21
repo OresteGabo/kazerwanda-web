@@ -1,7 +1,7 @@
 {
   "name": "Kaze Rwanda",
   "short_name": "Kaze",
-  "description": "Kaze Rwanda helps hotels, venues, and organizers manage conferences, invitations, guest access, hotel maps, event services, and offline AI support.",
+  "description": "Kaze Rwanda helps hotels, venues, and organizers manage events(conferences, weddings), guest access, hotel maps, event services, and offline AI support.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff9ee",
