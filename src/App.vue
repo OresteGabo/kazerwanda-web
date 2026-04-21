@@ -38,11 +38,12 @@
             </p>
           </div>
 
-          <p class="eyebrow">Welcome to Kaze</p>
-          <h1 id="hero-title">Your hotel, event, and guest access in one app.</h1>
+          <p class="eyebrow">Kaze Rwanda</p>
+          <h1 id="hero-title">Events, invitations, and guest access in one app.</h1>
           <p>
-            Kaze helps venues and organizers create invitations, confirm guests, attach services,
-            collect payments, and issue Kaze Pass access from one mobile-first flow.
+            Kaze Rwanda helps hotels, venues, and organizers create invitations, confirm guests,
+            attach services, collect payments, and issue Kaze Pass access from one mobile-first
+            flow.
           </p>
 
           <div class="feature-list" aria-label="Kaze highlights">
