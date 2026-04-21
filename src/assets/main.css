@@ -40,10 +40,11 @@ body {
   bottom: 22px;
   z-index: 40;
   width: min(360px, calc(100vw - 32px));
-  padding: 14px 16px;
-  border: 1px solid rgba(140, 107, 79, 0.16);
+  padding: 14px 44px 16px 16px;
+  border: 1px solid rgba(199, 154, 82, 0.34);
   border-radius: 18px;
-  background: rgba(255, 253, 248, 0.88);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 232, 0.96), rgba(255, 253, 248, 0.92));
   box-shadow: 0 20px 46px rgba(58, 49, 38, 0.08);
   backdrop-filter: blur(16px);
 }
@@ -58,9 +59,51 @@ body {
 
 .construction-toast p:not(.eyebrow) {
   margin: 6px 0 0;
-  color: var(--muted);
+  color: rgba(26, 23, 18, 0.7);
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+.construction-toast .eyebrow {
+  color: #a16c16;
+}
+
+.construction-toast::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d7a44d, #c78f2b);
+}
+
+.construction-toast-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(199, 154, 82, 0.12);
+  color: rgba(26, 23, 18, 0.72);
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.construction-toast-close:hover {
+  background: rgba(199, 154, 82, 0.2);
+  color: var(--ink);
+  transform: scale(1.04);
+}
+
+.construction-toast-close span {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .app-bar,
@@ -1668,6 +1711,6 @@ body {
     right: 14px;
     bottom: 14px;
     width: min(100vw - 28px, 360px);
-    padding: 12px 14px;
+    padding: 12px 40px 14px 14px;
   }
 }
