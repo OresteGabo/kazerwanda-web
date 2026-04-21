@@ -616,6 +616,131 @@ body {
   margin: 18px 0 28px;
 }
 
+.wedding-stage {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.5fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  margin: 6px 0 32px;
+  padding: 28px 28px 22px;
+  border: 1px solid rgba(184, 133, 126, 0.18);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(219, 143, 157, 0.16), transparent 26%),
+    radial-gradient(circle at 88% 20%, rgba(199, 154, 82, 0.12), transparent 24%),
+    linear-gradient(135deg, rgba(255, 250, 247, 0.94), rgba(255, 253, 248, 0.82));
+  box-shadow: 0 24px 58px rgba(58, 49, 38, 0.06);
+}
+
+.wedding-copy h3 {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 2.12rem;
+  line-height: 1.02;
+}
+
+.wedding-copy p:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.wedding-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.wedding-points span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(184, 133, 126, 0.16);
+  background: rgba(255, 253, 248, 0.72);
+  color: rgba(26, 23, 18, 0.78);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.wedding-visual {
+  position: relative;
+  min-height: 620px;
+}
+
+.wedding-visual .device-shot {
+  position: absolute;
+  right: 88px;
+  top: 12px;
+  width: 288px;
+  z-index: 2;
+  filter: drop-shadow(0 28px 54px rgba(80, 44, 48, 0.14));
+}
+
+.wedding-note {
+  position: absolute;
+  max-width: 240px;
+  padding: 16px 18px;
+  border: 1px solid rgba(184, 133, 126, 0.16);
+  background: rgba(255, 253, 248, 0.94);
+  box-shadow: 0 18px 42px rgba(80, 44, 48, 0.08);
+}
+
+.wedding-note p {
+  margin: 0;
+  color: rgba(184, 133, 126, 0.9);
+  font-size: 0.76rem;
+  font-weight: 860;
+  text-transform: uppercase;
+}
+
+.wedding-note strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.38;
+}
+
+.note-a {
+  left: 26px;
+  top: 78px;
+  z-index: 1;
+  transform: rotate(-4deg);
+}
+
+.note-b {
+  right: 10px;
+  bottom: 42px;
+  z-index: 3;
+  transform: rotate(3deg);
+}
+
+.wedding-heart {
+  position: absolute;
+  color: rgba(224, 94, 120, 0.75);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.heart-a {
+  top: 14px;
+  left: 28px;
+}
+
+.heart-b {
+  top: 132px;
+  right: 68px;
+  font-size: 1.25rem;
+}
+
+.heart-c {
+  bottom: 118px;
+  left: 94px;
+  font-size: 1.4rem;
+}
+
 .map-stage-notes {
   margin-top: 22px;
 }
@@ -946,6 +1071,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .wedding-stage {
+    grid-template-columns: 1fr;
+  }
+
   .screen-showcase {
     min-height: 500px;
   }
@@ -964,6 +1093,22 @@ body {
 
   .map-stage {
     grid-template-columns: 1fr;
+  }
+
+  .wedding-visual {
+    min-height: 560px;
+  }
+
+  .wedding-visual .device-shot {
+    right: 48px;
+  }
+
+  .note-a {
+    left: 0;
+  }
+
+  .note-b {
+    right: 0;
   }
 
   .map-stage-visual {
@@ -1101,6 +1246,58 @@ body {
   .showcase-notes,
   .map-stage-notes {
     grid-template-columns: 1fr;
+  }
+
+  .wedding-stage {
+    padding: 22px 20px;
+    margin-bottom: 24px;
+  }
+
+  .wedding-copy h3 {
+    font-size: 1.8rem;
+  }
+
+  .wedding-visual {
+    min-height: 480px;
+  }
+
+  .wedding-visual .device-shot {
+    right: 50%;
+    top: 8px;
+    width: 236px;
+    transform: translateX(50%);
+  }
+
+  .wedding-note {
+    max-width: 190px;
+    padding: 13px 14px;
+  }
+
+  .wedding-note strong {
+    font-size: 0.92rem;
+  }
+
+  .note-a {
+    top: 128px;
+    left: -2px;
+  }
+
+  .note-b {
+    right: -2px;
+    bottom: 20px;
+  }
+
+  .heart-a {
+    left: 8px;
+  }
+
+  .heart-b {
+    right: 20px;
+  }
+
+  .heart-c {
+    left: 26px;
+    bottom: 96px;
   }
 
   .map-stage {
