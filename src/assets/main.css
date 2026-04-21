@@ -452,6 +452,32 @@ body {
   line-height: 1.35;
 }
 
+.construction-note {
+  max-width: 520px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(140, 107, 79, 0.16);
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: 0 18px 46px rgba(58, 49, 38, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.construction-note strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.32;
+}
+
+.construction-note p:not(.eyebrow) {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .hero-actions {
   flex-wrap: wrap;
   gap: 12px;
