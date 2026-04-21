@@ -2,7 +2,11 @@
 
 Official website for Kaze Rwanda, a hospitality and event platform by GABO.
 
-Kaze presents venue discovery, reservation drafts, invitations, Kaze Pass access, maps, local payment options, and partner onboarding for hotels, wedding venues, conference rooms, apartments, and event service providers in Rwanda.
+Official website: [https://kazerwanda.com](https://kazerwanda.com)
+
+Canonical brand destination: `kazerwanda.com` is the main public home for Kaze Rwanda. This GitHub repository supports the website and should reinforce the same product identity, not replace the website as the primary brand page.
+
+Kaze Rwanda presents conferences, invitations, Kaze Pass guest access, hotel maps, event services, local payment options, and partner onboarding for hotels, venues, and organizers in Rwanda.
 
 ## Tech Stack
 
@@ -53,6 +57,6 @@ The website should feel premium, warm, and Rwandan-hospitality focused. Avoid ge
 
 This is a private business project. It is not open source. Do not copy, redistribute, publish, sublicense, or reuse this project or its assets without written permission from the owner.
 
-Contact: [orestegabo@icloud.com](mailto:orestegabo@icloud.com)
+Contact: [dev@kazerwanda.com](mailto:dev@kazerwanda.com)
 
 Website: [kazerwanda.com](https://kazerwanda.com)
