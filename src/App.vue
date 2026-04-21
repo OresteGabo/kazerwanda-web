@@ -1,5 +1,5 @@
 <template>
-  <div class="site-shell">
+  <div ref="siteShell" class="site-shell">
     <header class="app-bar" aria-label="Kaze Rwanda navigation">
       <a class="brand-lockup" href="#top" aria-label="Kaze Rwanda home">
         <img class="brand-mark" src="./assets/k_logo.svg" alt="Kaze mark" />
@@ -20,15 +20,15 @@
     </header>
 
     <main id="top">
-      <section class="onboarding-shell hero-shell" aria-labelledby="hero-title">
+      <section class="onboarding-shell hero-shell scroll-reveal reveal-section" aria-labelledby="hero-title">
         <AmbientPattern />
 
-        <div class="hero-visual">
+        <div class="hero-visual motion-stage phone-focus-stage" data-parallax="0.12">
           <PageHero page="0" />
           <DeviceShot screen="/app-screens/framed/kaze-home-framed.png" label="Kaze home and pass app screenshot" />
         </div>
 
-        <div class="hero-copy">
+        <div class="hero-copy scroll-reveal reveal-copy">
           <!-- TODO: Remove this construction notice before the public beta launch. -->
           <div class="construction-note" aria-label="Project status notice">
             <p class="eyebrow">Under construction</p>
@@ -45,7 +45,7 @@
             services, collect payments, and issue Kaze Pass access from one mobile-first flow.
           </p>
 
-          <div class="feature-list" aria-label="Kaze highlights">
+          <div class="feature-list scroll-reveal reveal-stagger" aria-label="Kaze highlights">
             <FeatureRow icon="explore" title="Stay and event details in one place" />
             <FeatureRow icon="service" title="Hotel services without calling" />
             <FeatureRow icon="support" title="Less front-desk and event-day friction" />
@@ -67,9 +67,9 @@
         </div>
       </section>
 
-      <section id="stay" class="onboarding-shell split-shell">
+      <section id="stay" class="onboarding-shell split-shell scroll-reveal reveal-section">
         <AmbientPattern />
-        <div class="section-copy">
+        <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Hotel experience</p>
           <h2>See your stay, services, and property details without waiting at the front desk.</h2>
           <p>
@@ -78,7 +78,7 @@
           </p>
         </div>
 
-        <div class="app-card-stack">
+        <div class="app-card-stack scroll-reveal reveal-stagger">
           <InfoCard
             eyebrow="Stay details"
             title="Everything stays close"
@@ -92,9 +92,9 @@
         </div>
       </section>
 
-      <section id="events" class="onboarding-shell flow-shell">
+      <section id="events" class="onboarding-shell flow-shell scroll-reveal reveal-section">
         <AmbientPattern />
-        <div class="section-copy">
+        <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Map and events</p>
           <h2>Find rooms, amenities, and event spaces fast.</h2>
           <p>
@@ -103,13 +103,13 @@
           </p>
         </div>
 
-        <div class="screen-showcase" aria-label="Kaze app screenshots">
+        <div class="screen-showcase motion-stage phone-focus-stage" data-parallax="0.16" aria-label="Kaze app screenshots">
           <DeviceShot screen="/app-screens/framed/kaze-wedding-framed.png" label="Kaze wedding event screen with invitation details" />
           <DeviceShot screen="/app-screens/framed/kaze-events-framed.png" label="Kaze event schedule screen with offline concierge" />
           <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
         </div>
 
-        <div class="showcase-notes" aria-label="Event flow highlights">
+        <div class="showcase-notes scroll-reveal reveal-stagger" aria-label="Event flow highlights">
           <InfoCard
             eyebrow="Arrival"
             title="Start from the guest view"
@@ -127,8 +127,8 @@
           />
         </div>
 
-        <div class="wedding-stage" aria-label="Wedding events on Kaze">
-          <div class="wedding-copy">
+        <div class="wedding-stage scroll-reveal reveal-section" aria-label="Wedding events on Kaze">
+          <div class="wedding-copy scroll-reveal reveal-copy">
             <p class="eyebrow">Wedding events</p>
             <h3>From vows to the evening reception, the guest flow can still feel graceful.</h3>
             <p>
@@ -143,7 +143,7 @@
             </div>
           </div>
 
-          <div class="wedding-visual">
+          <div class="wedding-visual motion-stage phone-focus-stage" data-parallax="0.12">
             <span class="wedding-heart heart-a" aria-hidden="true">♥</span>
             <span class="wedding-heart heart-b" aria-hidden="true">♥</span>
             <span class="wedding-heart heart-c" aria-hidden="true">♥</span>
@@ -159,8 +159,8 @@
           </div>
         </div>
 
-        <div class="map-stage" aria-label="Hotel map across two floors with amenity cards">
-          <div class="map-stage-copy">
+        <div class="map-stage scroll-reveal reveal-section" aria-label="Hotel map across two floors with amenity cards">
+          <div class="map-stage-copy scroll-reveal reveal-copy">
             <p class="eyebrow">Hotel maps</p>
             <h3>Some venues start with indoor maps across multiple floors.</h3>
             <p>
@@ -182,7 +182,7 @@
             </div>
           </div>
 
-          <div class="map-stage-visual">
+          <div class="map-stage-visual motion-stage phone-focus-stage" data-parallax="0.14">
             <DeviceShot screen="/app-screens/maps/kaze-map-ground-framed.png" label="Kaze hotel map on ground floor" />
             <DeviceShot screen="/app-screens/maps/kaze-map-first-framed.png" label="Kaze hotel map on first floor" />
             <img class="floating-fragment fragment-pool" src="/app-fragments/kaze-amenity-pool.png" alt="Kaze amenity card for infinity pool quiet hours" />
@@ -190,7 +190,7 @@
           </div>
         </div>
 
-        <div class="flow-grid">
+        <div class="flow-grid scroll-reveal reveal-stagger">
           <InfoCard
             v-for="item in eventPillars"
             :key="item.title"
@@ -201,15 +201,15 @@
         </div>
       </section>
 
-      <section id="requests" class="onboarding-shell request-shell">
+      <section id="requests" class="onboarding-shell request-shell scroll-reveal reveal-section">
         <AmbientPattern />
-        <div class="request-visual">
+        <div class="request-visual motion-stage phone-focus-stage" data-parallax="0.18">
           <PageHero page="2" />
           <DeviceShot screen="/app-screens/framed/kaze-events-framed.png" label="Kaze events screen with offline AI support" />
           <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
         </div>
 
-        <div class="section-copy">
+        <div class="section-copy scroll-reveal reveal-copy">
           <p class="eyebrow">Requests and access</p>
           <h2>Request services with less back and forth.</h2>
           <p>
@@ -219,7 +219,7 @@
           </p>
         </div>
 
-        <div class="ai-grid">
+        <div class="ai-grid scroll-reveal reveal-stagger">
           <InfoCard
             v-for="feature in aiFeatures"
             :key="feature.title"
@@ -230,8 +230,8 @@
         </div>
       </section>
 
-      <section id="partners" class="partner-panel">
-        <div>
+      <section id="partners" class="partner-panel scroll-reveal reveal-section">
+        <div class="scroll-reveal reveal-copy">
           <p class="eyebrow">For venues and operators</p>
           <h2>Make your space easier to book, serve, and control.</h2>
           <p>
@@ -240,7 +240,7 @@
             Rwanda.
           </p>
         </div>
-        <div class="partner-actions">
+        <div class="partner-actions scroll-reveal reveal-stagger">
           <a class="primary-button" href="mailto:dev@kazerwanda.com">Contact Kaze</a>
           <a class="secondary-button download-link" href="https://kazerwanda.com/download">Download app</a>
         </div>
@@ -257,8 +257,82 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from 'vue'
+import { defineComponent, h, onBeforeUnmount, onMounted, ref } from 'vue'
 import kLogo from './assets/k_logo.svg'
+
+const siteShell = ref(null)
+
+let revealObserver
+let motionFrame = 0
+let parallaxNodes = []
+let phoneFocusNodes = []
+
+function updateScrollMotion() {
+  motionFrame = 0
+
+  if (!siteShell.value) return
+
+  const viewportHeight = window.innerHeight || 1
+
+  for (const node of parallaxNodes) {
+    const rect = node.getBoundingClientRect()
+    const depth = Number(node.dataset.parallax || 0.14)
+    const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2
+    const normalized = Math.max(Math.min(centerOffset / viewportHeight, 1), -1)
+    const translate = normalized * depth * -90
+    const scale = 1 + (1 - Math.abs(normalized)) * depth * 0.08
+    node.style.setProperty('--parallax-offset', `${translate.toFixed(2)}px`)
+    node.style.setProperty('--parallax-scale', scale.toFixed(3))
+  }
+
+  for (const node of phoneFocusNodes) {
+    const rect = node.getBoundingClientRect()
+    const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2
+    const distance = Math.abs(centerOffset)
+    const focus = Math.max(0, 1 - Math.min(distance / (viewportHeight * 0.7), 1))
+    node.style.setProperty('--focus-progress', focus.toFixed(3))
+  }
+}
+
+function queueScrollMotion() {
+  if (motionFrame) return
+  motionFrame = window.requestAnimationFrame(updateScrollMotion)
+}
+
+onMounted(() => {
+  const revealNodes = [...document.querySelectorAll('.scroll-reveal')]
+  parallaxNodes = [...document.querySelectorAll('[data-parallax]')]
+  phoneFocusNodes = [...document.querySelectorAll('.phone-focus-stage')]
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue
+        entry.target.classList.add('is-visible')
+        revealObserver.unobserve(entry.target)
+      }
+    },
+    {
+      threshold: 0.16,
+      rootMargin: '0px 0px -10% 0px',
+    },
+  )
+
+  for (const node of revealNodes) {
+    revealObserver.observe(node)
+  }
+
+  updateScrollMotion()
+  window.addEventListener('scroll', queueScrollMotion, { passive: true })
+  window.addEventListener('resize', queueScrollMotion)
+})
+
+onBeforeUnmount(() => {
+  if (revealObserver) revealObserver.disconnect()
+  if (motionFrame) window.cancelAnimationFrame(motionFrame)
+  window.removeEventListener('scroll', queueScrollMotion)
+  window.removeEventListener('resize', queueScrollMotion)
+})
 
 const AmbientPattern = defineComponent({
   setup() {
