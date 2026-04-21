@@ -579,6 +579,21 @@ body {
   perspective: 1200px;
 }
 
+.showcase-notes,
+.map-stage-notes {
+  display: grid;
+  gap: 14px;
+}
+
+.showcase-notes {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 18px 0 28px;
+}
+
+.map-stage-notes {
+  margin-top: 22px;
+}
+
 .screen-showcase .phone-preview,
 .screen-showcase .device-shot {
   position: relative;
@@ -605,6 +620,88 @@ body {
 .screen-showcase .phone-preview:nth-child(3),
 .screen-showcase .device-shot:nth-child(3) {
   transform: rotate(7deg) translateY(22px);
+}
+
+.map-stage {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.48fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  margin: 8px 0 28px;
+  padding: 20px 0 10px;
+}
+
+.map-stage-copy h3 {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 2rem;
+  line-height: 1.02;
+}
+
+.map-stage-copy p:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.map-stage-visual {
+  position: relative;
+  min-height: 760px;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.map-stage-visual .device-shot {
+  position: absolute;
+  width: 280px;
+  height: auto;
+  background: transparent;
+  filter: drop-shadow(0 26px 48px rgba(58, 49, 38, 0.14));
+}
+
+.map-stage-visual .device-shot img {
+  border-radius: 38px;
+}
+
+.map-stage-visual .device-shot:first-child {
+  left: 30px;
+  bottom: 30px;
+  z-index: 2;
+  transform: rotate(-7deg);
+}
+
+.map-stage-visual .device-shot:nth-child(2) {
+  right: 40px;
+  top: 34px;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.floating-fragment {
+  position: absolute;
+  display: block;
+  width: 290px;
+  height: auto;
+  border: 1px solid rgba(140, 107, 79, 0.1);
+  border-radius: 34px;
+  box-shadow: 0 22px 52px rgba(58, 49, 38, 0.1);
+  background: rgba(255, 253, 248, 0.9);
+  pointer-events: none;
+}
+
+.fragment-pool {
+  top: 118px;
+  right: -168px;
+  z-index: 20;
+  transform: rotate(-5deg) translateZ(0);
+}
+
+.fragment-jazz {
+  left: -176px;
+  bottom: -26px;
+  z-index: 20;
+  transform: rotate(4deg) translateZ(0);
 }
 
 .flow-grid .info-card,
@@ -724,6 +821,16 @@ body {
   .request-visual .phone-preview + .phone-preview {
     animation: secondary-float 8s ease-in-out infinite;
   }
+
+  .map-stage-visual .device-shot:first-child,
+  .fragment-jazz {
+    animation: map-float-a 8s ease-in-out infinite;
+  }
+
+  .map-stage-visual .device-shot:nth-child(2),
+  .fragment-pool {
+    animation: map-float-b 9s ease-in-out infinite;
+  }
 }
 
 @keyframes soft-float {
@@ -745,6 +852,28 @@ body {
 
   50% {
     transform: translateY(10px) scale(0.86) rotate(4deg);
+  }
+}
+
+@keyframes map-float-a {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-7deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-6deg);
+  }
+}
+
+@keyframes map-float-b {
+  0%,
+  100% {
+    transform: translateY(0) rotate(4deg);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(5deg);
   }
 }
 
@@ -786,7 +915,8 @@ body {
   }
 
   .flow-grid,
-  .ai-grid {
+  .ai-grid,
+  .showcase-notes {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -804,6 +934,22 @@ body {
   .screen-showcase .device-shot:nth-child(2) {
     width: 226px;
     height: auto;
+  }
+
+  .map-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .map-stage-visual {
+    min-height: 720px;
+  }
+
+  .fragment-pool {
+    right: -72px;
+  }
+
+  .fragment-jazz {
+    left: -72px;
   }
 
   .partner-panel {
@@ -924,6 +1070,51 @@ body {
     margin: 0 10px 0 0;
     transform: none;
     scroll-snap-align: center;
+  }
+
+  .showcase-notes,
+  .map-stage-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .map-stage {
+    margin-bottom: 22px;
+  }
+
+  .map-stage-copy h3 {
+    font-size: 1.72rem;
+  }
+
+  .map-stage-visual {
+    min-height: 660px;
+  }
+
+  .map-stage-visual .device-shot {
+    width: 204px;
+  }
+
+  .map-stage-visual .device-shot:first-child {
+    left: -4px;
+    bottom: 110px;
+  }
+
+  .map-stage-visual .device-shot:nth-child(2) {
+    right: -2px;
+    top: 22px;
+  }
+
+  .floating-fragment {
+    width: 220px;
+  }
+
+  .fragment-pool {
+    top: 214px;
+    right: -78px;
+  }
+
+  .fragment-jazz {
+    left: -82px;
+    bottom: -8px;
   }
 
   .request-visual .phone-preview,
