@@ -1,7 +1,19 @@
 <template>
   <div ref="siteShell" class="site-shell">
     <!-- TODO: Remove this construction notice before the public beta launch. -->
-    <aside class="construction-toast" aria-label="Project status notice">
+    <aside
+      v-if="showConstructionToast"
+      class="construction-toast"
+      aria-label="Project status notice"
+    >
+      <button
+        class="construction-toast-close"
+        type="button"
+        aria-label="Dismiss construction notice"
+        @click="dismissConstructionToast"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
       <p class="eyebrow">Under construction</p>
       <strong>Kaze web and mobile are still evolving.</strong>
       <p>
@@ -261,6 +273,7 @@ import { defineComponent, h, onBeforeUnmount, onMounted, ref } from 'vue'
 import kLogo from './assets/k_logo.svg'
 
 const siteShell = ref(null)
+const showConstructionToast = ref(true)
 
 let revealObserver
 let motionFrame = 0
@@ -299,7 +312,13 @@ function queueScrollMotion() {
   motionFrame = window.requestAnimationFrame(updateScrollMotion)
 }
 
+function dismissConstructionToast() {
+  showConstructionToast.value = false
+  window.localStorage.setItem('kaze-hide-construction-toast', '1')
+}
+
 onMounted(() => {
+  showConstructionToast.value = window.localStorage.getItem('kaze-hide-construction-toast') !== '1'
   const revealNodes = [...document.querySelectorAll('.scroll-reveal')]
   parallaxNodes = [...document.querySelectorAll('[data-parallax]')]
   phoneFocusNodes = [...document.querySelectorAll('.phone-focus-stage')]
