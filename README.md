@@ -6,7 +6,7 @@ Official website: [https://kazerwanda.com](https://kazerwanda.com)
 
 Canonical brand destination: `kazerwanda.com` is the main public home for Kaze Rwanda. This GitHub repository supports the website and should reinforce the same product identity, not replace the website as the primary brand page.
 
-Kaze Rwanda presents conferences, invitations, Kaze Pass guest access, hotel maps, event services, local payment options, and partner onboarding for hotels, venues, and organizers in Rwanda.
+Kaze Rwanda presents events (weddings, conferences,...), Kaze Pass guest access, hotel maps, event services, local payment options, and partner onboarding for hotels, venues, and organizers in Rwanda.
 
 ## Tech Stack
 
