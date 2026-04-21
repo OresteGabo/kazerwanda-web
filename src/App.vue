@@ -104,7 +104,7 @@
         </div>
 
         <div class="screen-showcase" aria-label="Kaze app screenshots">
-          <DeviceShot screen="/app-screens/framed/kaze-home-framed.png" label="Kaze home screen with pass and quick actions" />
+          <DeviceShot screen="/app-screens/framed/kaze-wedding-framed.png" label="Kaze wedding event screen with invitation details" />
           <DeviceShot screen="/app-screens/framed/kaze-events-framed.png" label="Kaze event schedule screen with offline concierge" />
           <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
         </div>
@@ -125,6 +125,38 @@
             title="Invites stay connected to the venue"
             body="RSVP, approval, guest lists, and event updates can stay attached to the actual place people need to reach."
           />
+        </div>
+
+        <div class="wedding-stage" aria-label="Wedding events on Kaze">
+          <div class="wedding-copy">
+            <p class="eyebrow">Wedding events</p>
+            <h3>From vows to the evening reception, the guest flow can still feel graceful.</h3>
+            <p>
+              Kaze can support wedding events with elegant invitations, guest details, venue
+              timing, and access moments that stay beautiful instead of technical.
+            </p>
+
+            <div class="wedding-points" aria-label="Wedding event highlights">
+              <span>Invitation details close at hand</span>
+              <span>Venue, date, and access in one place</span>
+              <span>Built for private celebrations and family events</span>
+            </div>
+          </div>
+
+          <div class="wedding-visual">
+            <span class="wedding-heart heart-a" aria-hidden="true">♥</span>
+            <span class="wedding-heart heart-b" aria-hidden="true">♥</span>
+            <span class="wedding-heart heart-c" aria-hidden="true">♥</span>
+            <DeviceShot screen="/app-screens/framed/kaze-wedding-framed.png" label="Kaze wedding invitation and event screen" />
+            <div class="wedding-note note-a">
+              <p>Wedding day</p>
+              <strong>Guests stay oriented without the day feeling rigid.</strong>
+            </div>
+            <div class="wedding-note note-b">
+              <p>Garden vows</p>
+              <strong>Romantic events can still have clear timing, place, and flow.</strong>
+            </div>
+          </div>
         </div>
 
         <div class="map-stage" aria-label="Hotel map across two floors with amenity cards">
