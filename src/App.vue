@@ -100,6 +100,55 @@
           <DeviceShot screen="/app-screens/framed/kaze-invitations-framed.png" label="Kaze invitations screen with Smart RSVP assistant" />
         </div>
 
+        <div class="showcase-notes" aria-label="Event flow highlights">
+          <InfoCard
+            eyebrow="Arrival"
+            title="Start from the guest view"
+            body="Guests can land on one mobile home for their pass, invitation state, quick directions, and event shortcuts."
+          />
+          <InfoCard
+            eyebrow="During the event"
+            title="Keep the schedule and access close"
+            body="Sessions, maps, service moments, and low-connectivity help stay in the same flow instead of separate tools."
+          />
+          <InfoCard
+            eyebrow="For organizers"
+            title="Invites stay connected to the venue"
+            body="RSVP, approval, guest lists, and event updates can stay attached to the actual place people need to reach."
+          />
+        </div>
+
+        <div class="map-stage" aria-label="Hotel map across two floors with amenity cards">
+          <div class="map-stage-copy">
+            <p class="eyebrow">Hotel maps</p>
+            <h3>Some venues start with indoor maps across multiple floors.</h3>
+            <p>
+              Hotels and conference venues can guide guests from arrival to lobby, ballroom,
+              registration, amenities, and quieter spaces without extra calls.
+            </p>
+
+            <div class="map-stage-notes" aria-label="Map highlights">
+              <InfoCard
+                eyebrow="Ground floor"
+                title="Arrival, reception, expo, and main entry"
+                body="Show the first moments clearly so guests know where to check in, where to queue, and how to reach the main event path."
+              />
+              <InfoCard
+                eyebrow="Upper floor"
+                title="Ballrooms, breakout rooms, and quieter amenities"
+                body="Once guests are inside, Kaze can point them toward sessions, lounges, bars, pool areas, and other venue-linked services."
+              />
+            </div>
+          </div>
+
+          <div class="map-stage-visual">
+            <DeviceShot screen="/app-screens/maps/kaze-map-ground-framed.png" label="Kaze hotel map on ground floor" />
+            <DeviceShot screen="/app-screens/maps/kaze-map-first-framed.png" label="Kaze hotel map on first floor" />
+            <img class="floating-fragment fragment-pool" src="/app-fragments/kaze-amenity-pool.png" alt="Kaze amenity card for infinity pool quiet hours" />
+            <img class="floating-fragment fragment-jazz" src="/app-fragments/kaze-amenity-jazz.png" alt="Kaze amenity card for evening jazz set" />
+          </div>
+        </div>
+
         <div class="flow-grid">
           <InfoCard
             v-for="item in eventPillars"
