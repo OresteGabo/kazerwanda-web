@@ -263,7 +263,6 @@
       <span>Kaze Rwanda by GABO</span>
       <a href="mailto:dev@kazerwanda.com">dev@kazerwanda.com</a>
       <a href="https://kazerwanda.com">kazerwanda.com</a>
-      <a href="https://github.com/OresteGabo/kazerwanda-web" rel="me">GitHub</a>
     </footer>
   </div>
 </template>
