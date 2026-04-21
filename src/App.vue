@@ -29,6 +29,15 @@
         </div>
 
         <div class="hero-copy">
+          <!-- TODO: Remove this construction notice before the public beta launch. -->
+          <div class="construction-note" aria-label="Project status notice">
+            <p class="eyebrow">Under construction</p>
+            <strong>Kaze web and mobile are still evolving.</strong>
+            <p>
+              Some flows, visuals, and technical architecture may change before the beta release.
+            </p>
+          </div>
+
           <p class="eyebrow">Welcome to Kaze</p>
           <h1 id="hero-title">Your hotel, event, and guest access in one app.</h1>
           <p>
